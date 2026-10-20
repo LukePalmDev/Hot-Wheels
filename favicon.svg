@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF200" />
+      <stop offset="35%" stop-color="#FF5100" />
+      <stop offset="85%" stop-color="#E50914" />
+      <stop offset="100%" stop-color="#800000" />
+    </linearGradient>
+    <linearGradient id="innerFlame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#FFF000" />
+      <stop offset="100%" stop-color="#FF7700" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="64" height="64" rx="16" fill="#0C0E14" />
+  
+  <!-- Sfondo bagliore -->
+  <circle cx="32" cy="34" r="22" fill="#FF4500" opacity="0.3" filter="url(#glow)" />
+  
+  <!-- Fiamma principale -->
+  <path d="M32 7C32 7 38.5 17 35.5 25C33.5 30 28.5 32 28.5 37.5C28.5 44 34 48 34 48C34 48 30 45.5 27 42.5C23.5 39 23 34 23 34C23 34 18 39.5 18 47.5C18 55.5 25 61 33.5 61C43.5 61 50 53.5 50 43C50 27 32 7 32 7Z" fill="url(#flameGrad)" />
+  
+  <!-- Fiamma interna luminosa -->
+  <path d="M33.5 39C33.5 39 37.5 43.5 37.5 48C37.5 51.5 35.5 54 33.5 55.5C31.5 54 29.5 51.5 29.5 48C29.5 43.5 33.5 39 33.5 39Z" fill="url(#innerFlame)" />
+</svg>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Wheels Hub | Cataloghi, Database & Store per Collezionisti</title>
+  <meta name="description" content="Raccolta definitiva di link, cataloghi, database e marketplace per collezionisti Hot Wheels.">
+  <meta name="theme-color" content="#FF2A00">
+
+  <!-- Open Graph / Meta per social -->
+  <meta property="og:title" content="Hot Wheels Hub - Portale Risorse per Collezionisti">
+  <meta property="og:description" content="Tutti i migliori cataloghi, database ufficiali Mattel, checklist RLC e store per trovare le tue Hot Wheels preferite.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG con fiamma Hot Wheels -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Bebas Neue, Montserrat, Racing Sans One -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sfondo dinamico con scie di velocità -->
+  <div class="bg-speed-lines"></div>
+  <div class="bg-glow"></div>
+
+  <!-- Intestazione Principale -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <div class="flame-badge">
+          <svg viewBox="0 0 48 48" class="flame-icon" fill="currentColor">
+            <path d="M24 2C24 2 28.5 9 26 15C24.5 18.5 21 20 21 24C21 29 25 32 25 32C25 32 22 30 20 28C17.5 25.5 17 22 17 22C17 22 13 26 13 32C13 38.6 18.4 44 25 44C32.7 44 38 38 38 30C38 18 24 2 24 2Z"/>
+            <path d="M25 25C25 25 28 28.5 28 32C28 34.5 26.5 36.5 25 37.5C23.5 36.5 22 34.5 22 32C22 28.5 25 25 25 25Z" fill="#FFF200"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="flame-title-wrapper">
+            <h1 class="logo-title">HOT WHEELS</h1>
+            <span class="hub-tag">HUB</span>
+          </div>
+          <p class="logo-subtitle">LA GUIDA DEFINITIVA PER COLLEZIONISTI</p>
+        </div>
+      </div>
+
+      <!-- Statistiche rapide -->
+      <div class="quick-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="totalLinksCount">13</span>
+          <span class="stat-label">Risorse</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Categorie</span>
+        </div>
+        <div class="stat-item highlight">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">Aggiornato</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero con Barra di Ricerca e Filtri -->
+  <section class="controls-section">
+    <div class="container">
+      <div class="search-box-wrapper">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Cerca per nome, serie, parola chiave (es. Treasure Hunt, RLC, Wiki, eBay, Mattel...)" 
+            autocomplete="off"
+            aria-label="Cerca nei link"
+          />
+          <button id="clearSearch" class="clear-btn" title="Cancella ricerca" aria-label="Cancella">✕</button>
+        </div>
+      </div>
+
+      <!-- Filtri a pillola per categoria -->
+      <nav class="filter-pills" aria-label="Filtra per categoria">
+        <button class="pill active" data-category="all">
+          <span class="pill-dot"></span> Tutti i Link
+        </button>
+        <button class="pill" data-category="cataloghi">
+          <span class="pill-icon">📚</span> Cataloghi & Guide
+        </button>
+        <button class="pill" data-category="mattel">
+          <span class="pill-icon">🔥</span> Database Ufficiale Mattel
+        </button>
+        <button class="pill" data-category="shop">
+          <span class="pill-icon">🛒</span> Dove Comprare
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Contenitore Principale delle Categorie -->
+  <main class="container main-content" id="linksContainer">
+
+    <!-- SEZIONE 1: Cataloghi -->
+    <section class="category-block" data-category="cataloghi" id="sec-cataloghi">
+      <div class="category-header">
+        <div class="category-title-wrap">
+          <div class="category-icon-box icon-catalog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="category-title">Cataloghi & Checklist</h2>
+            <p class="category-desc">Archivi dettagliati, liste di casting, quotazioni di mercato e guide complete per identificare ogni modellino.</p>
+          </div>
+        </div>
+        <span class="category-badge">7 Risorse</span>
+      </div>
+
+      <div class="cards-grid">
+        <!-- 1. All Hot Wheels -->
+        <article class="link-card" data-keywords="all hot wheels catalogo archivio modelli serie varianti">
+          <div class="card-top">
+            <span class="badge badge-fire">Archivio Completo</span>
+            <span class="card-domain">allhotwheels.com</span>
+          </div>
+          <h3 class="card-title">All Hot Wheels</h3>
+          <p class="card-description">
+            Catalogo generale e archivio fotografico per identificare modelli, serie speciali, casting e varianti prodotte.
+          </p>
+          <div class="card-actions">
+            <a href="https://allhotwheels.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Visita Catalogo</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://allhotwheels.com/" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. CollectHW -->
+        <article class="link-card" data-keywords="collecthw collect hw collezione tracking checklist inventory lista">
+          <div class="card-top">
+            <span class="badge badge-accent">Tracker Collezione</span>
+            <span class="card-domain">collecthw.com</span>
+          </div>
+          <h3 class="card-title">CollectHW</h3>
+          <p class="card-description">
+            Piattaforma interattiva per catalogare la propria collezione Hot Wheels, creare checklist e monitorare i pezzi mancanti.
+          </p>
+          <div class="card-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>Se la pagina impiega qualche secondo a caricare, prova ad aggiornare.</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://collecthw.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Visita CollectHW</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://collecthw.com/" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. HobbyDB Hot Wheels -->
+        <article class="link-card" data-keywords="hobbydb hobby db database quotazioni prezzi valore collezionismo price guide">
+          <div class="card-top">
+            <span class="badge badge-gold">Quotazioni & Prezzi</span>
+            <span class="card-domain">hobbydb.com</span>
+          </div>
+          <h3 class="card-title">hobbyDB Hot Wheels</h3>
+          <p class="card-description">
+            Database universale di riferimento con valutazioni in tempo reale, storico prezzi di vendita, schede varianti e rarità.
+          </p>
+          <div class="card-actions">
+            <a href="https://www.hobbydb.com/home/hotwheels" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Esplora su hobbyDB</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://www.hobbydb.com/home/hotwheels" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Hot Wheels Fandom Wiki -->
+        <article class="link-card" data-keywords="fandom wiki list of hot wheels enciclopedia casting storia modelli lista completa">
+          <div class="card-top">
+            <span class="badge badge-blue">Wiki Ufficiale Fan</span>
+            <span class="card-domain">hotwheels.fandom.com</span>
+          </div>
+          <h3 class="card-title">Fandom Wiki: List of Hot Wheels</h3>
+          <p class="card-description">
+            La più immensa enciclopedia comunitaria con l'elenco cronologico di tutti i casting, dai Sweet 16 del 1968 fino a oggi.
+          </p>
+          <div class="card-actions">
+            <a href="https://hotwheels.fandom.com/wiki/List_of_Hot_Wheels" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Apri Fandom Wiki</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://hotwheels.fandom.com/wiki/List_of_Hot_Wheels" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Hot Wheels List -->
+        <article class="link-card" data-keywords="hotwheelslist hot wheels list checklist rapida codici ricerca">
+          <div class="card-top">
+            <span class="badge badge-accent">Checklist Veloce</span>
+            <span class="card-domain">hotwheelslist.net</span>
+          </div>
+          <h3 class="card-title">Hot Wheels List</h3>
+          <p class="card-description">
+            Portate essenziale e veloce per consultare numeri di serie, codici dei blister e collezioni annuali in formato lista.
+          </p>
+          <div class="card-actions">
+            <a href="https://hotwheelslist.net/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Vai a HotWheelsList</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://hotwheelslist.net/" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 6. Orange Track Diecast Master List -->
+        <article class="link-card featured" data-keywords="orange track diecast master list 2025 2026 tutte le linee mainline premium">
+          <div class="card-top">
+            <span class="badge badge-fire">Aggiornata al 2026</span>
+            <span class="card-domain">orangetrackdiecast.com</span>
+          </div>
+          <h3 class="card-title">Orange Track Diecast: Master List</h3>
+          <p class="card-description">
+            Master list esaustiva organizzata per linea (Mainline, Premium, Car Culture, Fast & Furious). Sempre aggiornata con le uscite attuali e future.
+          </p>
+          <div class="card-actions">
+            <a href="https://orangetrackdiecast.com/2025-hot-wheels-master-list-of-all-lines/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Consulta Master List</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://orangetrackdiecast.com/2025-hot-wheels-master-list-of-all-lines/" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 7. HW RLC Checklist -->
+        <article class="link-card featured-gold" data-keywords="hwrlc rlc red line club checklist uscite esclusive esclusive collectors">
+          <div class="card-top">
+            <span class="badge badge-gold">Red Line Club (RLC)</span>
+            <span class="card-domain">hwrlc.com</span>
+          </div>
+          <h3 class="card-title">HW RLC Checklist</h3>
+          <p class="card-description">
+            La checklist definitiva dedicata alle prestigiose uscite del Red Line Club: edizioni limitate, confezioni speciali e numerazioni esclusive.
+          </p>
+          <div class="card-actions">
+            <a href="https://hwrlc.com/checklist/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Apri Checklist RLC</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://hwrlc.com/checklist/" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2: Database Ufficiale Mattel -->
+    <section class="category-block" data-category="mattel" id="sec-mattel">
+      <div class="category-header">
+        <div class="category-title-wrap">
+          <div class="category-icon-box icon-mattel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="category-title">Database Ufficiale Mattel</h2>
+            <p class="category-desc">Il portale istituzionale Mattel dedicato alla community globale dei collezionisti e punto di accesso all'app Showcase.</p>
+          </div>
+        </div>
+        <span class="category-badge">Ufficiale</span>
+      </div>
+
+      <div class="cards-grid one-featured">
+        <!-- Mattel Creations Collectors -->
+        <article class="link-card card-spotlight" data-keywords="mattel creations collectors official showcase app database rlc forum">
+          <div class="card-glow-edge"></div>
+          <div class="card-top">
+            <span class="badge badge-mattel">Portale Ufficiale Mattel</span>
+            <span class="badge badge-accent">Accesso App Showcase</span>
+            <span class="card-domain">creations.mattel.com</span>
+          </div>
+          <h3 class="card-title">Mattel Creations: Hot Wheels Collectors</h3>
+          <p class="card-description">
+            Hub ufficiale Mattel per i collezionisti di tutto il mondo. Offre anteprime di drop futuri, articoli dietro le quinte, il forum ufficiale della community e il collegamento all’app <strong>Showcase</strong>.
+          </p>
+          <div class="card-features-list">
+            <div class="feature-tag">📱 Hub per App Showcase</div>
+            <div class="feature-tag">⭐ Calendario Drop RLC</div>
+            <div class="feature-tag">💬 Forum Collezionisti</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://creations.mattel.com/pages/hot-wheels-collectors" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary btn-large">
+              <span>Accedi al Portale Mattel</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://creations.mattel.com/pages/hot-wheels-collectors" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEZIONE 3: Dove Comprare -->
+    <section class="category-block" data-category="shop" id="sec-shop">
+      <div class="category-header">
+        <div class="category-title-wrap">
+          <div class="category-icon-box icon-shop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="category-title">Dove Comprare & Marketplace</h2>
+            <p class="category-desc">Negozi ufficiali con spedizione diretta in Italia, mercatini di compravendita e sezioni dedicate ai Treasure Hunt.</p>
+          </div>
+        </div>
+        <span class="category-badge">5 Negozi & Marketplace</span>
+      </div>
+
+      <div class="cards-grid">
+        <!-- 1. Mattel Creations Shop -->
+        <article class="link-card featured" data-keywords="mattel creations shop comprare rlc edizioni limitate spedizione italia">
+          <div class="card-top">
+            <span class="badge badge-green">Spedisce in Italia 🇮🇹</span>
+            <span class="badge badge-mattel">Ufficiale</span>
+            <span class="card-domain">creations.mattel.com</span>
+          </div>
+          <h3 class="card-title">Mattel Creations Shop</h3>
+          <p class="card-description">
+            Lo store ufficiale per acquistare le esclusive release Red Line Club, edizioni numerate e collaborazioni speciali con spedizione garantita verso l'Italia.
+          </p>
+          <div class="card-actions">
+            <a href="https://creations.mattel.com/collections/hot-wheels-collectors" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Acquista su Mattel Creations</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://creations.mattel.com/collections/hot-wheels-collectors" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. Shop Mattel Italia -->
+        <article class="link-card" data-keywords="shopping mattel italia macchinine pista pack 5 pezzi negozio">
+          <div class="card-top">
+            <span class="badge badge-green">Shop Ufficiale Italia 🇮🇹</span>
+            <span class="card-domain">shopping.mattel.com</span>
+          </div>
+          <h3 class="card-title">Shop Ufficiale Mattel Italia</h3>
+          <p class="card-description">
+            Il canale e-commerce ufficiale per l'Italia: assortimenti mainline, multipack, piste, set tematici e novità commerciali.
+          </p>
+          <div class="card-actions">
+            <a href="https://shopping.mattel.com/it-it/collections/macchinine-hot-wheels" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Visita Shop Mattel Italia</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://shopping.mattel.com/it-it/collections/macchinine-hot-wheels" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. eBay.it - Treasure Hunt -->
+        <article class="link-card" data-keywords="ebay treasure hunt th sth super treasure hunt aste compralo subito rarita">
+          <div class="card-top">
+            <span class="badge badge-fire">Treasure Hunt (TH / $TH)</span>
+            <span class="card-domain">ebay.it</span>
+          </div>
+          <h3 class="card-title">eBay.it: Treasure Hunt</h3>
+          <p class="card-description">
+            Sezione filtrata dedicata ai ricercatissimi modellini Treasure Hunt e Super Treasure Hunt ($TH) in asta o compralo subito su eBay Italia.
+          </p>
+          <div class="card-actions">
+            <a href="https://www.ebay.it/b/Modellini-statici-auto-serie-Hot-Wheels-Treasure-Hunt/180273/bn_88866394" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Cerca TH su eBay</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://www.ebay.it/b/Modellini-statici-auto-serie-Hot-Wheels-Treasure-Hunt/180273/bn_88866394" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Etsy - Treasure Hunt -->
+        <article class="link-card" data-keywords="etsy treasure hunt custom espositori teche diorami pezzi unici">
+          <div class="card-top">
+            <span class="badge badge-gold">Custom & Rarità</span>
+            <span class="card-domain">etsy.com</span>
+          </div>
+          <h3 class="card-title">Etsy: Treasure Hunt & Custom</h3>
+          <p class="card-description">
+            Marketplace per pezzi speciali: modellini Treasure Hunt originali, modelli customizzati a mano, ruote Real Riders e teche espositive personalizzate.
+          </p>
+          <div class="card-actions">
+            <a href="https://www.etsy.com/it/market/hot_wheels_treasure_hunt" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Esplora su Etsy</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://www.etsy.com/it/market/hot_wheels_treasure_hunt" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Wallapop -->
+        <article class="link-card" data-keywords="wallapop privati usato lotti scambi vintage italia seconda mano">
+          <div class="card-top">
+            <span class="badge badge-accent">Compravendita Privati</span>
+            <span class="card-domain">it.wallapop.com</span>
+          </div>
+          <h3 class="card-title">Wallapop: Hot Wheels Italia</h3>
+          <p class="card-description">
+            La più attiva app di compravendita tra collezionisti in Italia per trovare lotti convenienti, pezzi vintage introvabili e scambi diretti.
+          </p>
+          <div class="card-actions">
+            <a href="https://it.wallapop.com/oggetti-da-collezione/macchinine-hot-wheels" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+              <span>Cerca su Wallapop</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="btn-action btn-copy" data-url="https://it.wallapop.com/oggetti-da-collezione/macchinine-hot-wheels" title="Copia link negli appunti">
+              <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Messaggio Nessun Risultato (visibile solo se la ricerca non trova nulla) -->
+    <div id="noResults" class="no-results hidden">
+      <div class="no-results-icon">🔍</div>
+      <h3>Nessuna risorsa trovata</h3>
+      <p>Nessun link corrisponde ai criteri di ricerca. Prova a digitare parole come "RLC", "Treasure", "Mattel", "Wiki" o "eBay".</p>
+      <button id="resetSearchBtn" class="btn-action btn-primary">Reimposta Ricerca</button>
+    </div>
+
+  </main>
+
+  <!-- Footer con credits e disclaimer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <span class="logo-title-sm">HOT WHEELS</span>
+        <span class="hub-tag-sm">HUB</span>
+      </div>
+      <p class="footer-disclaimer">
+        Hot Wheels Hub è una piattaforma no-profit ad accesso libero realizzata per la community di appassionati e collezionisti diecast.<br>
+        Tutti i marchi, loghi e nomi commerciali appartengono ai rispettivi proprietari (Hot Wheels® e Mattel, Inc.).
+      </p>
+      <div class="footer-links">
+        <a href="#sec-cataloghi">Cataloghi</a>
+        <a href="#sec-mattel">Database Mattel</a>
+        <a href="#sec-shop">Dove Comprare</a>
+        <a href="https://github.com/LukePalmDev/Hot-Wheels" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notifica Copia -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Link copiato negli appunti!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
