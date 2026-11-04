@@ -6,11 +6,13 @@
   <title>Hot Wheels Hub | Cataloghi, Database & Store per Collezionisti</title>
   <meta name="description" content="Raccolta definitiva di link, cataloghi, database e marketplace per collezionisti Hot Wheels.">
   <meta name="theme-color" content="#FF2A00">
+  <link rel="canonical" href="https://hotwheels.byluke.org/">
 
   <!-- Open Graph / Meta per social -->
   <meta property="og:title" content="Hot Wheels Hub - Portale Risorse per Collezionisti">
   <meta property="og:description" content="Tutti i migliori cataloghi, database ufficiali Mattel, checklist RLC e store per trovare le tue Hot Wheels preferite.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hotwheels.byluke.org/">
 
   <!-- Favicon SVG con fiamma Hot Wheels -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -23,6 +25,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#linksContainer">Vai al contenuto</a>
   <!-- Sfondo dinamico con scie di velocità -->
   <div class="bg-speed-lines"></div>
   <div class="bg-glow"></div>
@@ -80,22 +83,22 @@
             autocomplete="off"
             aria-label="Cerca nei link"
           />
-          <button id="clearSearch" class="clear-btn" title="Cancella ricerca" aria-label="Cancella">✕</button>
+          <button id="clearSearch" class="clear-btn" type="button" title="Cancella ricerca" aria-label="Cancella ricerca">✕</button>
         </div>
       </div>
 
       <!-- Filtri a pillola per categoria -->
       <nav class="filter-pills" aria-label="Filtra per categoria">
-        <button class="pill active" data-category="all">
+        <button class="pill active" type="button" data-category="all" aria-pressed="true">
           <span class="pill-dot"></span> Tutti i Link
         </button>
-        <button class="pill" data-category="cataloghi">
+        <button class="pill" type="button" data-category="cataloghi" aria-pressed="false">
           <span class="pill-icon">📚</span> Cataloghi & Guide
         </button>
-        <button class="pill" data-category="mattel">
+        <button class="pill" type="button" data-category="mattel" aria-pressed="false">
           <span class="pill-icon">🔥</span> Database Ufficiale Mattel
         </button>
-        <button class="pill" data-category="shop">
+        <button class="pill" type="button" data-category="shop" aria-pressed="false">
           <span class="pill-icon">🛒</span> Dove Comprare
         </button>
       </nav>
@@ -141,7 +144,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://allhotwheels.com/" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://allhotwheels.com/" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -171,7 +174,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://collecthw.com/" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://collecthw.com/" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -197,7 +200,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://www.hobbydb.com/home/hotwheels" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://www.hobbydb.com/home/hotwheels" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -223,7 +226,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://hotwheels.fandom.com/wiki/List_of_Hot_Wheels" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://hotwheels.fandom.com/wiki/List_of_Hot_Wheels" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -236,20 +239,20 @@
         <article class="link-card" data-keywords="hotwheelslist hot wheels list checklist rapida codici ricerca">
           <div class="card-top">
             <span class="badge badge-accent">Checklist Veloce</span>
-            <span class="card-domain">hotwheelslist.net</span>
+            <span class="card-domain">hotwheelslist.com</span>
           </div>
           <h3 class="card-title">Hot Wheels List</h3>
           <p class="card-description">
-            Portate essenziale e veloce per consultare numeri di serie, codici dei blister e collezioni annuali in formato lista.
+            Portale essenziale e veloce per consultare numeri di serie, codici dei blister e collezioni annuali in formato lista.
           </p>
           <div class="card-actions">
-            <a href="https://hotwheelslist.net/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+            <a href="https://hotwheelslist.com/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
               <span>Vai a HotWheelsList</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://hotwheelslist.net/" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://hotwheelslist.com/" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -269,13 +272,13 @@
             Master list esaustiva organizzata per linea (Mainline, Premium, Car Culture, Fast & Furious). Sempre aggiornata con le uscite attuali e future.
           </p>
           <div class="card-actions">
-            <a href="https://orangetrackdiecast.com/2025-hot-wheels-master-list-of-all-lines/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
+            <a href="https://orangetrackdiecast.com/2026-hot-wheels-master-list-of-all-lines/" target="_blank" rel="noopener noreferrer" class="btn-action btn-primary">
               <span>Consulta Master List</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://orangetrackdiecast.com/2025-hot-wheels-master-list-of-all-lines/" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://orangetrackdiecast.com/2026-hot-wheels-master-list-of-all-lines/" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -301,7 +304,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://hwrlc.com/checklist/" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://hwrlc.com/checklist/" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -354,7 +357,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://creations.mattel.com/pages/hot-wheels-collectors" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://creations.mattel.com/pages/hot-wheels-collectors" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -403,7 +406,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://creations.mattel.com/collections/hot-wheels-collectors" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://creations.mattel.com/collections/hot-wheels-collectors" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -429,7 +432,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://shopping.mattel.com/it-it/collections/macchinine-hot-wheels" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://shopping.mattel.com/it-it/collections/macchinine-hot-wheels" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -455,7 +458,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://www.ebay.it/b/Modellini-statici-auto-serie-Hot-Wheels-Treasure-Hunt/180273/bn_88866394" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://www.ebay.it/b/Modellini-statici-auto-serie-Hot-Wheels-Treasure-Hunt/180273/bn_88866394" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -481,7 +484,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://www.etsy.com/it/market/hot_wheels_treasure_hunt" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://www.etsy.com/it/market/hot_wheels_treasure_hunt" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -507,7 +510,7 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <button class="btn-action btn-copy" data-url="https://it.wallapop.com/oggetti-da-collezione/macchinine-hot-wheels" title="Copia link negli appunti">
+            <button class="btn-action btn-copy" type="button" data-url="https://it.wallapop.com/oggetti-da-collezione/macchinine-hot-wheels" title="Copia link negli appunti">
               <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -523,7 +526,7 @@
       <div class="no-results-icon">🔍</div>
       <h3>Nessuna risorsa trovata</h3>
       <p>Nessun link corrisponde ai criteri di ricerca. Prova a digitare parole come "RLC", "Treasure", "Mattel", "Wiki" o "eBay".</p>
-      <button id="resetSearchBtn" class="btn-action btn-primary">Reimposta Ricerca</button>
+      <button id="resetSearchBtn" class="btn-action btn-primary" type="button">Reimposta Ricerca</button>
     </div>
 
   </main>

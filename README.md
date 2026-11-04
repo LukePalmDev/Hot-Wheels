@@ -2,7 +2,7 @@
 
 > La guida e directory definitiva ai cataloghi, database e marketplace Hot Wheels per collezionisti.
 
-Visita la versione live del sito: **[lukepalmdev.github.io/Hot-Wheels](https://lukepalmdev.github.io/Hot-Wheels/)**
+Visita la versione live del sito: **[hotwheels.byluke.org](https://hotwheels.byluke.org/)**
 
 ---
 
@@ -29,8 +29,8 @@ Visita la versione live del sito: **[lukepalmdev.github.io/Hot-Wheels](https://l
 - **[CollectHW](https://collecthw.com/)**: Checklist e tracker della propria collezione.
 - **[hobbyDB Hot Wheels](https://www.hobbydb.com/home/hotwheels)**: Database con quotazioni di mercato e guide ai prezzi.
 - **[Hot Wheels Fandom Wiki](https://hotwheels.fandom.com/wiki/List_of_Hot_Wheels)**: L'enciclopedia comunitaria con l'elenco completo dei casting.
-- **[Hot Wheels List](https://hotwheelslist.net/)**: Checklist essenziale e rapida.
-- **[Orange Track Diecast Master List](https://orangetrackdiecast.com/2025-hot-wheels-master-list-of-all-lines/)**: Master list per tutte le linee, aggiornata al 2026.
+- **[Hot Wheels List](https://hotwheelslist.com/)**: Checklist essenziale e rapida.
+- **[Orange Track Diecast Master List](https://orangetrackdiecast.com/2026-hot-wheels-master-list-of-all-lines/)**: Master list per tutte le linee, aggiornata al 2026.
 - **[HW RLC Checklist](https://hwrlc.com/checklist/)**: Cronologia e checklist delle uscite esclusive del Red Line Club.
 
 ### 2. Database Ufficiale Mattel

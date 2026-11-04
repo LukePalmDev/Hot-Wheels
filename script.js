@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearSearchBtn = document.getElementById('clearSearch');
   const filterPills = document.querySelectorAll('.filter-pills .pill');
   const categoryBlocks = document.querySelectorAll('.category-block');
-  const linkCards = document.querySelectorAll('.link-card');
   const noResults = document.getElementById('noResults');
   const resetSearchBtn = document.getElementById('resetSearchBtn');
   const totalCountEl = document.getElementById('totalLinksCount');
@@ -96,25 +95,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Pulsante di reset dentro "Nessun risultato"
   resetSearchBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    searchTerm = '';
-    activeCategory = 'all';
-
-    filterPills.forEach((p) => p.classList.remove('active'));
-    const allPill = document.querySelector('.filter-pills [data-category="all"]');
-    if (allPill) allPill.classList.add('active');
-
-    updateClearButton();
-    applyFilters();
+    resetFilters();
+    searchInput.focus();
   });
+
+  function setActivePill(category) {
+    activeCategory = category;
+    filterPills.forEach((pill) => {
+      const selected = pill.getAttribute('data-category') === category;
+      pill.classList.toggle('active', selected);
+      pill.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    });
+  }
 
   // Event listener per i filtri a pillola
   filterPills.forEach((pill) => {
     pill.addEventListener('click', () => {
-      filterPills.forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
-      activeCategory = pill.getAttribute('data-category');
+      setActivePill(pill.getAttribute('data-category'));
       applyFilters();
+    });
+  });
+
+  function resetFilters() {
+    searchInput.value = '';
+    searchTerm = '';
+    setActivePill('all');
+    updateClearButton();
+    applyFilters();
+  }
+
+  // I link di sezione devono mostrare la categoria anche se un filtro la nasconde
+  document.querySelectorAll('a[href^="#sec-"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      event.preventDefault();
+      resetFilters();
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+      history.pushState(null, '', '#' + id);
     });
   });
 
@@ -133,6 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Gestione pulsante Copia Link
   document.querySelectorAll('.btn-copy').forEach((button) => {
+    const cardTitle = button.closest('.link-card')?.querySelector('.card-title')?.textContent?.trim();
+    if (cardTitle) button.setAttribute('aria-label', `Copia link ${cardTitle}`);
+
     button.addEventListener('click', async (e) => {
       e.preventDefault();
       const url = button.getAttribute('data-url');
