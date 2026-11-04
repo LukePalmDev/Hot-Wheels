@@ -28,7 +28,7 @@
   /* Testi */
   --text-main: #FFFFFF;
   --text-muted: #9BA3B8;
-  --text-dim: #647087;
+  --text-dim: #7D879C;
 
   /* Gradienti */
   --grad-flame: linear-gradient(135deg, #FFD000 0%, #FF5500 50%, #E60012 100%);
@@ -89,12 +89,29 @@ body {
   top: -200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
+  width: min(800px, 100%);
   height: 400px;
   background: radial-gradient(circle, rgba(255, 85, 0, 0.2) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: -1;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  z-index: 1000;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  color: #090B10;
+  font-weight: 800;
+  border-radius: 8px;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
 
 .container {
@@ -123,7 +140,7 @@ body {
   bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: min(400px, 100%);
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--hw-orange), transparent);
 }
@@ -304,6 +321,8 @@ body {
 
 .search-box input {
   flex: 1;
+  min-width: 0;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
@@ -405,7 +424,7 @@ body {
 
 .category-block {
   margin-bottom: 56px;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 184px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -417,6 +436,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 24px;
   padding-bottom: 16px;
@@ -438,6 +458,8 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex: 1 1 260px;
+  min-width: 0;
 }
 
 .category-icon-box {
@@ -498,7 +520,7 @@ body {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
   color: var(--text-muted);
-  white-space: nowrap;
+  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -506,7 +528,7 @@ body {
    ========================================================================== */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 22px;
 }
 
@@ -728,6 +750,7 @@ body {
 
 .btn-primary {
   flex: 1;
+  min-width: 0;
   background: var(--grad-flame-btn);
   color: #FFFFFF;
   box-shadow: 0 4px 15px rgba(255, 85, 0, 0.3);
@@ -904,6 +927,15 @@ body {
   color: var(--hw-orange);
 }
 
+:focus-visible {
+  outline: 2px solid var(--hw-yellow);
+  outline-offset: 3px;
+}
+
+.search-box input:focus-visible {
+  outline: none;
+}
+
 /* ==========================================================================
    TOAST NOTIFICATION
    ========================================================================== */
@@ -948,6 +980,21 @@ body {
     align-items: flex-start;
   }
 
+  .filter-pills {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pill {
+    flex-shrink: 0;
+  }
+
   .quick-stats {
     width: 100%;
     justify-content: space-around;
@@ -959,13 +1006,6 @@ body {
 
   .cards-grid {
     grid-template-columns: 1fr;
-  }
-
-  .filter-pills {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    -webkit-overflow-scrolling: touch;
   }
 
   .filter-pills::-webkit-scrollbar {
@@ -983,5 +1023,60 @@ body {
     right: 20px;
     bottom: 20px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .container,
+  .main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .quick-stats {
+    width: 100%;
+    gap: 0;
+    padding: 8px 4px;
+    justify-content: space-between;
+  }
+
+  .stat-item {
+    min-width: 0;
+    padding: 0 4px;
+  }
+
+  .stat-item:not(:last-child) {
+    padding-right: 8px;
+  }
+
+  .stat-number {
+    font-size: 1.45rem;
+  }
+
+  .stat-label {
+    letter-spacing: 0.2px;
+    font-size: 0.6rem;
+  }
+
+  .logo-title {
+    font-size: 2.15rem;
+  }
+
+  .logo-subtitle {
+    letter-spacing: 0.6px;
+    font-size: 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
